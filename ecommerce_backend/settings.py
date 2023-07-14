@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,12 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+sa!#$1$8(^6lof=%scl*e02cfyc-z^jfzj%bkh2^_s*qc!kcg'
+# SECRET_KEY = 'django-insecure-+sa!#$1$8(^6lof=%scl*e02cfyc-z^jfzj%bkh2^_s*qc!kcg'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://deployecommbackend-production.up.railway.app/', 'localhost', '127.0.0.1']
+CORS_ALLOWED_ORIGINS = ['https://deployecommbackend-production.up.railway.app/']
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
