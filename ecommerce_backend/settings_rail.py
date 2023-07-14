@@ -3,6 +3,8 @@ from decouple import config
 
 SECRET_KEY = config('SECRET_KEY')
 
+DEBUG = False
+
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
