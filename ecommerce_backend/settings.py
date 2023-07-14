@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://deployecommbackend-production.up.railway.app/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['deployecommbackend-production.up.railway.app', 'localhost', '127.0.0.1']
 CORS_ALLOWED_ORIGINS = ['https://deployecommbackend-production.up.railway.app/']
 
 AUTH_USER_MODEL = 'users.CustomUser'
