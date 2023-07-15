@@ -3,10 +3,11 @@ import stripe
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from decouple import config
 
 # Create your views here.
-stripe.pk_key = "pk_test_51NRzaVSJBFQgqHCVPhUewMVcKjayIkUR0xGlOdLBA5N2Xcv1ZLMUegi3aCMucwD3RSgNudxYFixXvrozDVjTKjAo00Aa6HTb8n"
-stripe.api_key = "sk_test_51NRzaVSJBFQgqHCVeVtpVlRUTghlPQowgRKXmtshwaLteMPB3Vjl8o2lHQGVKTC47u8aU5SPSCUX5w83tXFF5EJw00GeyU0v7m"
+stripe.pk_key = config('STRIPE_PUBLIC_KEY')
+stripe.api_key = config('STRIPE_PRIVATE_KEY')
 
 # @api_view(['POST'])
 # def test_payment(request):

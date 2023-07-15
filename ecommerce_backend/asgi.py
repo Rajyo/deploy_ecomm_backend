@@ -11,11 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-# if DEBUG == True:
-#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings')
-# else:
-#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings_rail')
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings')
 
 application = get_asgi_application()
