@@ -11,9 +11,11 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-if DEBUG == True:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings')
-else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings_rail')
+# if DEBUG == True:
+#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings')
+# else:
+#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings_rail')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce_backend.settings')
 
 application = get_wsgi_application()
